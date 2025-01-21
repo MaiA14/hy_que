@@ -23,7 +23,7 @@
      ```
     2) Combine uuid in order to generate id
 
-- utils.ts:
+- util.ts:
 1) use Array.from in range function is more efficent:
 ```bash
     export function range(n: number): number[] {
