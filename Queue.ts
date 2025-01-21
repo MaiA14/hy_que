@@ -7,7 +7,7 @@ export class Queue {
 
     constructor() {
         this.messages = [];
-        this.inProcessMessages = new Map(); // save the relation between worker id to message. in addition, using map structure is effeicent.
+        this.inProcessMessages = new Map(); // save the relation between worker id to message. in addition, using map structure is effeicent. prevents working on the same message
         this.dequeueIndex = 0;
     }
 
