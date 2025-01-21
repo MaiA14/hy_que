@@ -7,7 +7,7 @@ export class Queue {
 
     constructor() {
         this.messages = [];
-        this.inProcessMessages = new Map(); // save the data in key-value pair enable us saving a relation between workerid to message. in addition, using map structure is effeicent.
+        this.inProcessMessages = new Map(); // save the relation between worker id to message. in addition, using map structure is effeicent.
         this.dequeueIndex = 0;
     }
 
@@ -30,8 +30,11 @@ export class Queue {
         return undefined;
     }
 
+    // each message in inProcessMessages is saved with worker id so we can compare and delete it from the in process messages map 
     Confirm = (workerId: number, messageId: string) => {
-        if (this.inProcessMessages.get(messageId) === workerId) {
+        const currentWorkerId = this.inProcessMessages.get(messageId);
+    
+        if (currentWorkerId === workerId) {
             this.inProcessMessages.delete(messageId);
         }
     }
