@@ -1,3 +1,6 @@
+## Queue:
+See my implementation in the file.
+
 ## Suggestions:
 - main.ts:
     1) Use Promise.all
