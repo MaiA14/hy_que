@@ -8,7 +8,7 @@
         return worker.Work(db.set);
     });
     ```
-    2) remove the sleep, handle it using promise.all
+    2) Remove the sleep, handle it using promise.all
     ```
       await Promise.all(workersPromises);
     ```
@@ -24,7 +24,7 @@
     2) Combine uuid in order to generate id
 
 - util.ts:
-1) use Array.from in range function is more efficent:
+1) Use Array.from in range function is more efficent:
 ```bash
     export function range(n: number): number[] {
         return Array.from({ length: n }, (_, index) => index);
