@@ -33,7 +33,6 @@ export class Queue {
     // each message in inProcessMessages is saved with worker id so we can compare and delete it from the in process messages map 
     Confirm = (workerId: number, messageId: string) => {
         const currentWorkerId = this.inProcessMessages.get(messageId);
-    
         if (currentWorkerId === workerId) {
             this.inProcessMessages.delete(messageId);
         }
