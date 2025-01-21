@@ -15,8 +15,8 @@ export class Queue {
         this.messages.push(message);
     }
 
-    // originally the code worked with splice which is inefficient because splice changes the original array and which leads us to 
-    // re-copy the array. using dequeue index helps us prevent this infficency.
+    // originally the code worked with splice which is inefficient because splice changes the original array and leads us to 
+    // re-copy the array. Using dequeue index helps us prevent this infficency.
     Dequeue = (workerId: number): Message | undefined => {
         while (this.dequeueIndex < this.messages.length) { // checking for the first meesage which isn't in process (new)
             const message = this.messages[this.dequeueIndex];
