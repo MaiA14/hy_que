@@ -27,9 +27,9 @@ See my implementation in the file.
     2) Combine uuid in order to generate id
 
 - util.ts:
-1) Use Array.from in range function is more efficent:
-```bash
-    export function range(n: number): number[] {
-        return Array.from({ length: n }, (_, index) => index);
-    }
-```
+    1) Use Array.from in range function is more efficent:
+    ```bash
+        export function range(n: number): number[] {
+            return Array.from({ length: n }, (_, index) => index);
+        }
+    ```
